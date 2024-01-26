@@ -1,0 +1,20 @@
+spring:
+    datasource:
+        url: ${SPRINGBOOT_DATASOURCE_URL}
+        username: ${SPRINGBOOT_DATASOURCE_USER}
+        password: ${SPRINGBOOT_DATASOURCE_PASS}
+    jpa:
+        hibernate:
+            ddl-auto: update
+        show-sql: true
+        properties:
+            hibernate:
+                '[format_sql]': yes 
+                dialect: "org.hibernate.dialect.PostgreSQLDialect"
+s3:
+    accesskey: ${MINIO_ACCESS}
+    secretkey: ${MINIO_SECRET}
+    endpoint: ${MINIO_ENDPOINT}
+    bucketName:
+        examillustrations: ${MINIO_BUCKET1}
+        examphotos: ${MINIO_BUCKET2}
